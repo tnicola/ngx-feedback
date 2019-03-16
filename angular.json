@@ -130,6 +130,41 @@
           }
         }
       }
+    },
+    "ngx-feedback": {
+      "root": "projects/ngx-feedback",
+      "sourceRoot": "projects/ngx-feedback/src",
+      "projectType": "library",
+      "prefix": "ngx-feedback",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-feedback/tsconfig.lib.json",
+            "project": "projects/ngx-feedback/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-feedback/src/test.ts",
+            "tsConfig": "projects/ngx-feedback/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-feedback/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-feedback/tsconfig.lib.json",
+              "projects/ngx-feedback/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngx-feedback-lib"

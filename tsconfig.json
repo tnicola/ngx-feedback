@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-feedback": [
+        "dist/ngx-feedback"
+      ],
+      "ngx-feedback/*": [
+        "dist/ngx-feedback/*"
+      ]
+    }
   }
 }
