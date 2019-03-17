@@ -1,0 +1,27 @@
+.feedback-button {
+    &__container {
+        position: fixed;
+        right: -34px;
+        top: calc(50% - 37.5px);
+        cursor: pointer;
+        -webkit-transform: rotateZ(90deg);
+        transform: rotateZ(-90deg);
+        border: none;
+        border-radius: 5px 5px 0 0;
+        background-color: #3b5560;
+        color: #ffffff;
+        font-size: 14px;
+        padding: 5px 10px;
+        font-weight: bold;
+        font-family: Verdana;
+        outline: none;
+    }
+}
+
+.ngx-feedback {
+    &__highlight {
+        outline: 2px solid red;
+        pointer-events: none;
+        cursor: default !important;
+    }
+}

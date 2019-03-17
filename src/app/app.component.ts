@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { NgxFeedbackService } from 'ngx-feedback';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ngx-feedback-lib';
+    constructor(private readonly feedbackService: NgxFeedbackService) {}
+    title = 'ngx-feedback-lib';
 }

@@ -1,0 +1,9 @@
+<div *ngIf="visible" class="modal">
+    <button (click)="onGeneric()">General</button>
+    <button (click)="onSpecific()">Specific</button>
+    <div>
+        <div>Preview:</div>
+        <img [src]="imgSrc" style="width: 100%" />
+    </div>
+    <button (click)="onSend()">Send</button>
+</div>

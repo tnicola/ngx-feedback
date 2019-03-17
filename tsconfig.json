@@ -20,10 +20,10 @@
     ],
     "paths": {
       "ngx-feedback": [
-        "dist/ngx-feedback"
+        "projects/ngx-feedback/src/public-api.ts"
       ],
       "ngx-feedback/*": [
-        "dist/ngx-feedback/*"
+        "projects/ngx-feedback/src/*"
       ]
     }
   }
