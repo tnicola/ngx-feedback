@@ -1,10 +1,15 @@
-.modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 500px;
-    height: 500px;
-    background: #c3babad1;
-    transform: translate(-250px, -250px);
-  }
-  
+.ngx-feedback-modal {
+    &__container {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 500px;
+        height: 500px;
+        z-index: 1000;
+        background: #ffffff;
+        transform: translate(-250px, -250px);
+        border: solid 1px #3b5560;
+        border-radius: 2px;
+        box-shadow: 0px 0px 30px 1px #000000;
+    }
+}

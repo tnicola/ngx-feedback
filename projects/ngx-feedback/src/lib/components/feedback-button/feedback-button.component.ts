@@ -1,17 +1,18 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { ModalService } from '../../services/modal.service';
+import { OrchestratorService } from '../../services/orchestrator.service';
+import { EventsService } from 'ngx-feedback/lib/services/events.service';
 
 @Component({
-    selector: 'ngx-feedback-feedback-button',
+    selector: 'ngx-feedback-main-btn',
     templateUrl: './feedback-button.component.html',
     styleUrls: ['./feedback-button.component.scss'],
     encapsulation: ViewEncapsulation.None
 })
 export class FeedbackButtonComponent implements OnInit {
-    constructor(private modal: ModalService) {}
+    constructor(private eventsService: EventsService) {}
 
     ngOnInit() {}
     onClick() {
-        this.modal.draw();
+        this.eventsService.onFeedbackButtonClick();
     }
 }

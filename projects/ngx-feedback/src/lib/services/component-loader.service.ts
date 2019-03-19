@@ -1,4 +1,14 @@
-import { Injectable, Type, ComponentRef, ComponentFactoryResolver, ApplicationRef, Injector, EmbeddedViewRef } from '@angular/core';
+import {
+    Injectable,
+    Type,
+    ComponentRef,
+    ComponentFactoryResolver,
+    ApplicationRef,
+    Injector,
+    EmbeddedViewRef,
+    ComponentFactory
+} from '@angular/core';
+import { OrchestratorService } from './orchestrator.service';
 
 @Injectable({ providedIn: 'root' })
 export class ComponentLoaderService<T> {

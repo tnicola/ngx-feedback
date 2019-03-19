@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { SelectorsService } from '../../services/selectors.service';
+import { OrchestratorService } from '../../services/orchestrator.service';
+import { EventsService } from 'ngx-feedback/lib/services/events.service';
 
 @Component({
     selector: 'ngx-feedback-modal',
@@ -10,22 +11,19 @@ export class ModalComponent implements OnInit {
     imgSrc = '';
     visible = true;
 
-    constructor(private selectorsService: SelectorsService) {}
+    constructor(private readonly eventsService: EventsService) {}
 
-    ngOnInit() {
-        this.selectorsService.preview.subscribe(prev => {
-            this.visible = true;
-            this.imgSrc = prev;
-        });
-    }
+    ngOnInit() {}
     onSpecific() {
-        this.selectorsService.elementsHighlight();
-        this.visible = false;
+        this.eventsService.onSpecificFeedbackClick();
     }
 
     onGeneric() {
-        this.selectorsService.pageScreenshot();
-        this.visible = false;
+        this.eventsService.onGenericFeedbackClik();
+    }
+
+    setPreview(preview: any) {
+        this.imgSrc = preview;
     }
 
     onSend() {}

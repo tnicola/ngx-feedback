@@ -1,9 +1,9 @@
-<div *ngIf="visible" class="modal">
-    <button (click)="onGeneric()">General</button>
-    <button (click)="onSpecific()">Specific</button>
+<div *ngIf="visible" class="ngx-feedback-modal__container">
+    <ngx-feedback-btn (click)="onGeneric()">General</ngx-feedback-btn>
+    <ngx-feedback-btn (click)="onSpecific()">Specific</ngx-feedback-btn>
     <div>
         <div>Preview:</div>
         <img [src]="imgSrc" style="width: 100%" />
     </div>
-    <button (click)="onSend()">Send</button>
+    <ngx-feedback-btn (click)="onSend()">Send</ngx-feedback-btn>
 </div>
