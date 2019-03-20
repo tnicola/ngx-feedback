@@ -1,15 +1,54 @@
 .ngx-feedback-modal {
     &__container {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
         position: fixed;
         top: 50%;
         left: 50%;
-        width: 500px;
-        height: 500px;
+        width: 400px;
+        padding: 10px;
         z-index: 1000;
         background: #ffffff;
-        transform: translate(-250px, -250px);
+        transform: translate(-200px, -250px);
         border: solid 1px #3b5560;
-        border-radius: 2px;
+        border-radius: 3px;
         box-shadow: 0px 0px 30px 1px #000000;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__boxes {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    &__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+        padding: 10px;
+        border: 2px solid #3b5560;
+        border-radius: 3px;
+        margin: 0px 10px;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+        &:hover {
+            padding: 7px;
+            margin: 3px;
+        }
+    }
+    &__send {
+        float: right;
+    }
+    &__icon {
+        width: 40px;
+        padding-top: 10px;
+    }
+    &__preview{
+        border: 1px solid #3b5560;
     }
 }

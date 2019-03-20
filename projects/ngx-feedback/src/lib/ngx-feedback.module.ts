@@ -10,9 +10,11 @@ import { ButtonComponent } from './components/button/button.component';
 import { BackdropComponent } from './components/backdrop/backdrop.component';
 import { OrchestratorService } from './services/orchestrator.service';
 import { EventsService } from './services/events.service';
+import { StarComponent } from './components/star/star.component';
+import { StarVoteComponent } from './components/star-vote/star-vote.component';
 
 @NgModule({
-    declarations: [FeedbackButtonComponent, ModalComponent, ButtonComponent, BackdropComponent],
+    declarations: [FeedbackButtonComponent, ModalComponent, ButtonComponent, BackdropComponent, StarComponent, StarVoteComponent],
     entryComponents: [FeedbackButtonComponent, ModalComponent, BackdropComponent],
     providers: [NgxFeedbackService, OrchestratorService, ComponentLoaderService, ModalService, SelectorsService, EventsService],
     imports: [CommonModule],

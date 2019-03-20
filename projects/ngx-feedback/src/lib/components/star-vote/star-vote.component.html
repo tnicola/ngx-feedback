@@ -1,0 +1,10 @@
+<div class="ngx-feedback-star-vote__container">
+    <div class="ngx-feedback-star-vote__star" *ngFor="let s of stars; index as i">
+        <ngx-feedback-star
+            (click)="onClick(i)"
+            (mouseenter)="onMouseEnter(i)"
+            (mouseleave)="onMouseLeave(i)"
+            [type]="s.type"
+        ></ngx-feedback-star>
+    </div>
+</div>
