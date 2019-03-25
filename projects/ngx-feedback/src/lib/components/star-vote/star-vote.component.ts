@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'ngx-feedback-star-vote',
@@ -14,6 +14,9 @@ export class StarVoteComponent implements OnInit {
         { type: 'empty', value: 5 }
     ];
 
+    @Output()
+    voted: EventEmitter<any> = new EventEmitter<any>();
+
     constructor() {}
 
     ngOnInit() {}
@@ -26,6 +29,7 @@ export class StarVoteComponent implements OnInit {
                 s.type = 'empty';
             }
         });
+        this.voted.emit();
     }
 
     onMouseEnter(index: number) {

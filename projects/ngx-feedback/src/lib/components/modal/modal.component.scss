@@ -1,4 +1,22 @@
 .ngx-feedback-modal {
+    &__header {
+        height: 30px;
+        color: #3b5560;
+        font-weight: bold;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__title {
+        padding-left: 16px;
+        padding-top: 8px;
+    }
+
+    &__footer {
+        height: 30px;
+    }
+
     &__container {
         font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
         position: fixed;
@@ -17,6 +35,15 @@
         flex-direction: column;
         justify-content: space-between;
     }
+
+    &__content {
+        padding: 20px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     &__boxes {
         display: flex;
         flex-direction: row;
@@ -29,16 +56,21 @@
         justify-content: center;
         align-items: center;
         height: 80px;
-        padding: 10px;
-        border: 2px solid #3b5560;
-        border-radius: 3px;
-        margin: 0px 10px;
+        padding: 5px 15px;
         font-size: 14px;
         font-weight: bold;
         cursor: pointer;
-        &:hover {
-            padding: 7px;
-            margin: 3px;
+        &--border {
+            border: 2px solid #3b5560;
+            border-radius: 3px;
+        }
+        &-container {
+            padding: 5px;
+            margin: 0px 10px;
+            &--border {
+                border-radius: 3px;
+                border: 2px solid #3b5560;
+            }
         }
     }
     &__send {
@@ -48,7 +80,29 @@
         width: 40px;
         padding-top: 10px;
     }
-    &__preview{
+
+    &__preview {
+        &-container {
+            display: flex;
+            justify-content: center;
+        }
+        width: 80%;
+        border: 2px solid #3b5560;
+        border-radius: 3px;
+    }
+
+    &__textarea {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        outline-color: #3b5560;
+        border-radius: 3px;
         border: 1px solid #3b5560;
+        margin-bottom: 20px;
+        width: 80%;
+        padding: 5px;
+    }
+
+    &__close {
+        width: 14px;
+        cursor: pointer;
     }
 }

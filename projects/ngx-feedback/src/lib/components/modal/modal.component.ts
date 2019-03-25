@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { OrchestratorService } from '../../services/orchestrator.service';
 import { EventsService } from 'ngx-feedback/lib/services/events.service';
 
 @Component({
@@ -9,8 +8,9 @@ import { EventsService } from 'ngx-feedback/lib/services/events.service';
 })
 export class ModalComponent implements OnInit {
     imgSrc = '';
-    visible = true;
-
+    enterSpecific: boolean;
+    enterGeneric: boolean;
+    voted: boolean;
     constructor(private readonly eventsService: EventsService) {}
 
     ngOnInit() {}
@@ -22,8 +22,16 @@ export class ModalComponent implements OnInit {
         this.eventsService.onGenericFeedbackClik();
     }
 
+    onCloseClicked() {
+        this.eventsService.onCloseClicked();
+    }
+
     setPreview(preview: any) {
         this.imgSrc = preview;
+    }
+
+    onVote() {
+        this.voted = true;
     }
 
     onSend() {}

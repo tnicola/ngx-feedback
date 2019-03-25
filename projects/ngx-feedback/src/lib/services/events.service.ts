@@ -14,6 +14,9 @@ export class EventsService {
     private genericFeedbackClick: Subject<any> = new Subject<any>();
     genericFeedbackClickObservable: Observable<any> = this.genericFeedbackClick.asObservable();
 
+    private closeClick: Subject<any> = new Subject<any>();
+    closeClickClickObservable: Observable<any> = this.closeClick.asObservable();
+
     onSpecificFeedbackClick() {
         this.specificFeedbackClick.next();
     }
@@ -23,5 +26,9 @@ export class EventsService {
     }
     onFeedbackButtonClick() {
         this.feedbackClick.next();
+    }
+
+    onCloseClicked() {
+        this.closeClick.next();
     }
 }
