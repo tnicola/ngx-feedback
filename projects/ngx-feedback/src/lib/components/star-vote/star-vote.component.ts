@@ -15,7 +15,7 @@ export class StarVoteComponent implements OnInit {
     ];
 
     @Output()
-    voted: EventEmitter<any> = new EventEmitter<any>();
+    voted: EventEmitter<number> = new EventEmitter<number>();
 
     constructor() {}
 
@@ -29,7 +29,7 @@ export class StarVoteComponent implements OnInit {
                 s.type = 'empty';
             }
         });
-        this.voted.emit();
+        this.voted.emit(index + 1);
     }
 
     onMouseEnter(index: number) {

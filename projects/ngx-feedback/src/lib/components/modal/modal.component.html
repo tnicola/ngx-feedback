@@ -149,8 +149,9 @@
         <div class="ngx-feedback-modal__preview-container" *ngIf="imgSrc">
             <div class="ngx-feedback-modal__preview"><img [src]="imgSrc" style="width: 100%; height: auto" /></div>
         </div>
-        <ngx-feedback-star-vote *ngIf="imgSrc" (voted)="onVote()"></ngx-feedback-star-vote>
+        <ngx-feedback-star-vote *ngIf="imgSrc" (voted)="onVote($event)"></ngx-feedback-star-vote>
         <textarea
+            #comment
             class="ngx-feedback-modal__textarea"
             *ngIf="imgSrc && voted"
             rows="4"

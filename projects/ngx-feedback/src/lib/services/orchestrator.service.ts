@@ -19,7 +19,8 @@ export class OrchestratorService implements OnInit, OnDestroy {
             this.onSpecificFeedbackClick(),
             this.onGenericFeedbackClick(),
             this.onElementSelected(),
-            this.onCloseClick()
+            this.onCloseClick(),
+            this.onSendClick()
         );
     }
 
@@ -53,6 +54,10 @@ export class OrchestratorService implements OnInit, OnDestroy {
         return this.eventsService.closeClickClickObservable.subscribe(() => {
             this.modalService.remove();
         });
+    }
+
+    private onSendClick(){
+        return this.eventsService.onSendClickObservable.subscribe(() => {});
     }
     ngOnDestroy() {
         this.subscriptions.forEach(sub => {
