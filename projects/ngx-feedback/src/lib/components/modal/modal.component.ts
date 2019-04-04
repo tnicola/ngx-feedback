@@ -44,7 +44,6 @@ export class ModalComponent implements OnInit {
 
     onSend() {
         this.formData.comment = this.comment.nativeElement.value;
-        console.log('this.formData', this.formData);
         this.eventsService.onSendClicked(this.formData);
         this.thanks = true;
         setTimeout(() => {

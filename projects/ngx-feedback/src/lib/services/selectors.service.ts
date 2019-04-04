@@ -28,15 +28,12 @@ export class SelectorsService {
             element = document.elementFromPoint(ev.x, ev.y);
             if (elements.findIndex(el => el === element) === -1) {
                 elements.push(element);
-                console.log('Pushing element', element);
                 this.subs.push(
                     fromEvent(element, 'click').subscribe((evt: MouseEvent) => {
                         evt.stopPropagation();
                         this.screenshot(element);
-                        console.log('clicked', evt.target);
                     })
                 );
-                console.log(this.subs.length, this.subs);
             }
             this.renderer.addClass(element, 'ngx-feedback__highlight');
         });
@@ -45,10 +42,8 @@ export class SelectorsService {
     screenshot(element: any) {
         let image;
         html2canvas(element).then(canvas => {
-            console.log('Canvas', canvas);
             image = (canvas as HTMLCanvasElement).toDataURL();
             this.preview.next(image);
-            console.log('aaa', image);
         });
         this.renderer.removeClass(element, 'ngx-feedback__highlight');
 

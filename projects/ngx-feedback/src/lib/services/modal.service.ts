@@ -20,7 +20,6 @@ export class ModalService {
     }
 
     remove() {
-        console.log('Destroying');
         this.modalRef.destroy();
         this.backdropRef.destroy();
     }

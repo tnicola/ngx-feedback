@@ -17,6 +17,5 @@ export class StarComponent implements OnInit {
 
     onClick() {
         this.click.emit();
-        console.log('Star clicked');
     }
 }

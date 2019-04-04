@@ -11,8 +11,6 @@ export class AppComponent implements OnInit {
     title = 'ngx-feedback-lib';
 
     ngOnInit() {
-        this.feedbackService.listenForFeedbacks().subscribe(data => {
-            console.log('Arriva', data);
-        });
+        this.feedbackService.listenForFeedbacks().subscribe(data => {});
     }
 }
