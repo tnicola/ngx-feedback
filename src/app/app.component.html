@@ -1,20 +1,81 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="app-root__container">
+    <div class="app-root__header">
+        <img class="app-root__angular-logo" src="../assets/angular.svg" />
+        <div class="app-root__title">ngx-feedback</div>
+    </div>
+    <div class="app-root__body">
+        <div class="app-root__main">
+            <div class="app-root__box app-root__box-left">
+                <div class="app-root__box-title">What is ngx-feeback?</div>
+                <p>
+                    An Angular library helping devs to easily collect Wep App users reviews and real time feedbacks about the product, new
+                    features or potential bugs.
+                </p>
+                <p>
+                    Ngx-feedback relies upon <a href="https://github.com/niklasvh/html2canvas">html2canvas</a> library to take webpages
+                    screenshots.
+                </p>
+            </div>
+            <div class="app-root__box app-root__box-right">
+                <div class="app-root__box-title">Features</div>
+                <ul>
+                    <li>A <strong>feedback button</strong> you can place at the edge of the page.</li>
+                    <li>A <strong>screenshot</strong> of the whole page or of a particular feature/element.</li>
+                    <li>
+                        A <strong>modal form</strong> in which the <strong>user</strong> could add his <strong>comment</strong> about the
+                        product and vote thanks to a star rating component.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="app-root__instructions">
+            <div class="app-root__step">
+                <div class="app-root__step-title">Install</div>
+                <div class="app-root__step-body app-root__step-code">
+                    <p class="app-root__code">npm i ngx-feedback</p>
+                    <p>or</p>
+                    <p class="app-root__code">yarn add ngx-feedback</p>
+                </div>
+            </div>
+            <div class="app-root__step">
+                <div class="app-root__step-title">Documentation</div>
+                <div class="app-root__step-body">Documentation will be available soon...</div>
+            </div>
+            <div class="app-root__step app-root__step-last">
+                <div class="app-root__step-title">Do you like it?</div>
+                <div class="app-root__step-body">
+                    <div class="app-root__star">
+                        <iframe
+                            src="https://ghbtns.com/github-btn.html?user=tnicola&repo=ngx-feedback&type=star&count=true&size=large"
+                            frameborder="0"
+                            scrolling="0"
+                            width="160px"
+                            height="30px"
+                        ></iframe>
+                    </div>
+                    <div class="app-root__watch">
+                        <iframe
+                            src="https://ghbtns.com/github-btn.html?user=tnicola&repo=ngx-feeback&type=watch&count=true&size=large&v=2"
+                            frameborder="0"
+                            scrolling="0"
+                            width="160px"
+                            height="30px"
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<a class="app-root__twitter-button" href="https://twitter.com/nicola_tommasi" data-size="large">Follow @nicola_tommasi</a>-->
 
+    <div class="app-root__footer">
+        <div class="app-root__footer-text">ngx-feedback is released under a MIT license by Nicola Tommasi</div>
+        <iframe
+            src="https://ghbtns.com/github-btn.html?user=tnicola&type=follow&count=true"
+            frameborder="0"
+            scrolling="0"
+            width="170px"
+            height="20px"
+        ></iframe>
+    </div>
+</div>

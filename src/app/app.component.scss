@@ -1,0 +1,128 @@
+.app-root {
+    &__container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: white;
+    }
+    &__header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0 20px;
+        height: 80px;
+        background-color: #467e3f;
+        color: white;
+        font-size: 24px;
+    }
+    &__body {
+        height: 100%;
+        background-color: rgba(146, 145, 67, 0.4);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    &__footer {
+        height: 60px;
+        background-color: #2f2504;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 13px;
+        &-text {
+            margin-right: 10px;
+        }
+    }
+    &__main {
+        height: 50%;
+        width: 75%;
+        display: flex;
+        justify-content: space-around;
+        padding: 5px;
+    }
+    &__instructions {
+        height: 30%;
+        width: 75%;
+        display: flex;
+        justify-content: space-between;
+        padding: 16px;
+        margin: 5px;
+    }
+    &__box {
+        width: 40%;
+        padding: 24px;
+        margin: 16px;
+        line-height: 24px;
+        &-title {
+            font-size: 24px;
+            font-weight: bold;
+            padding-bottom: 20px;
+        }
+        &-left {
+            background-color: #2f2504;
+        }
+        &-right {
+            background-color: #2f2504;
+        }
+        & li {
+            padding-bottom: 5px;
+        }
+        & a {
+            color: white;
+        }
+    }
+    &__step {
+        &-title {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        &-body {
+            width: 50%;
+            padding: 8px 16px;
+            margin-top: 16px;
+            margin-left: 16px;
+        }
+
+        &-code{
+            background-color: rgba(146, 145, 67, 0.5);
+        }
+
+        &-last{
+            position: relative;
+        }
+
+        margin: 5px;
+        padding: 16px;
+        width: 30%;
+        background-color: #467e3f;
+    }
+
+    &__angular-logo {
+        width: 48px;
+    }
+
+    &__twitter-button {
+        position: relative;
+        height: 20px;
+        box-sizing: border-box;
+        padding: 1px 8px 1px 6px;
+        background-color: #1b95e0;
+        color: #fff;
+        border-radius: 3px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    &__star{
+        padding-bottom: 16px;
+    }
+
+    &__code {
+        font-family: monospace;
+        font-size: 14px;
+    }
+}
