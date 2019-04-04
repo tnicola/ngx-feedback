@@ -6,14 +6,16 @@ import { OrchestratorService } from './services';
 @Injectable({
     providedIn: 'root'
 })
-export class NgxFeedbackService implements OnInit {
+export class NgxFeedbackService {
     constructor(
         private readonly componentLoader: ComponentLoaderService<FeedbackButtonComponent>,
         private readonly orchestratorService: OrchestratorService
-    ) {
+    ) {}
+
+    listenForFeedbacks() {
         this.orchestratorService.ngOnInit();
         this.componentLoader.load(FeedbackButtonComponent);
-    }
 
-    ngOnInit() {}
+        return this.orchestratorService.onSend;
+    }
 }

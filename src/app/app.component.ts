@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgxFeedbackService } from 'ngx-feedback';
 
 @Component({
@@ -6,7 +6,13 @@ import { NgxFeedbackService } from 'ngx-feedback';
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
     constructor(private readonly feedbackService: NgxFeedbackService) {}
     title = 'ngx-feedback-lib';
+
+    ngOnInit() {
+        this.feedbackService.listenForFeedbacks().subscribe(data => {
+            console.log('Arriva', data);
+        });
+    }
 }

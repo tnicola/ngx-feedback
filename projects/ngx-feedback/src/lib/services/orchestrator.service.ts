@@ -2,11 +2,14 @@ import { Injectable, OnInit, OnDestroy } from '@angular/core';
 import { ModalService } from './modal.service';
 import { SelectorsService } from './selectors.service';
 import { EventsService } from './events.service';
-import { Subscription } from 'rxjs';
+import { Subscription, Subject } from 'rxjs';
+import { FeedbackData } from '../models/feedback.model';
 
 @Injectable({ providedIn: 'root' })
 export class OrchestratorService implements OnInit, OnDestroy {
     private subscriptions: Subscription[] = [];
+
+    onSend: Subject<FeedbackData> = new Subject<FeedbackData>();
     constructor(
         private readonly modalService: ModalService,
         private readonly selectorsService: SelectorsService,
@@ -56,8 +59,10 @@ export class OrchestratorService implements OnInit, OnDestroy {
         });
     }
 
-    private onSendClick(){
-        return this.eventsService.onSendClickObservable.subscribe(() => {});
+    private onSendClick() {
+        return this.eventsService.onSendClickObservable.subscribe((data: FeedbackData) => {
+            this.onSend.next(data);
+        });
     }
     ngOnDestroy() {
         this.subscriptions.forEach(sub => {
