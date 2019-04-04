@@ -12,6 +12,7 @@ export class ModalComponent implements OnInit {
     enterSpecific: boolean;
     enterGeneric: boolean;
     voted: boolean;
+    thanks: boolean;
 
     @ViewChild('comment') comment: ElementRef;
 
@@ -45,5 +46,9 @@ export class ModalComponent implements OnInit {
         this.formData.comment = this.comment.nativeElement.value;
         console.log('this.formData', this.formData);
         this.eventsService.onSendClicked(this.formData);
+        this.thanks = true;
+        setTimeout(() => {
+            this.eventsService.onCloseClicked();
+        }, 2000);
     }
 }

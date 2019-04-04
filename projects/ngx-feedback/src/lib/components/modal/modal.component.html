@@ -9,7 +9,10 @@
         </div>
     </div>
     <div class="ngx-feedback-modal__content">
-        <div *ngIf="!imgSrc" class="ngx-feedback-modal__boxes">
+        <div *ngIf="thanks">
+                Thanks for your feedback!
+        </div>
+        <div *ngIf="!imgSrc && !thanks" class="ngx-feedback-modal__boxes">
             <div
                 class="ngx-feedback-modal__box-container"
                 [class.ngx-feedback-modal__box-container--border]="!enterGeneric"
@@ -146,14 +149,14 @@
             </div>
         </div>
 
-        <div class="ngx-feedback-modal__preview-container" *ngIf="imgSrc">
+        <div class="ngx-feedback-modal__preview-container" *ngIf="imgSrc && !thanks">
             <div class="ngx-feedback-modal__preview"><img [src]="imgSrc" style="width: 100%; height: auto" /></div>
         </div>
-        <ngx-feedback-star-vote *ngIf="imgSrc" (voted)="onVote($event)"></ngx-feedback-star-vote>
+        <ngx-feedback-star-vote *ngIf="imgSrc && !thanks" (voted)="onVote($event)"></ngx-feedback-star-vote>
         <textarea
             #comment
             class="ngx-feedback-modal__textarea"
-            *ngIf="imgSrc && voted"
+            *ngIf="imgSrc && voted && !thanks"
             rows="4"
             cols="50"
             placeholder="Enter your feedback..."
@@ -162,6 +165,6 @@
     </div>
 
     <div class="ngx-feedback-modal__footer">
-        <ngx-feedback-btn *ngIf="imgSrc" class="ngx-feedback-modal__send" (click)="onSend()">Send</ngx-feedback-btn>
+        <ngx-feedback-btn *ngIf="imgSrc && !thanks" class="ngx-feedback-modal__send" (click)="onSend()">Send</ngx-feedback-btn>
     </div>
 </div>
