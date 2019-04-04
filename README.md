@@ -1,4 +1,4 @@
-# ngx-feedback 📸⭐🗨️
+# ngx-feedback 📸⭐💬
 Angular user feedback library
 
 ## Demo
