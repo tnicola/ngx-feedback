@@ -1,28 +1,36 @@
+$medium-width: 1024px;
+$medium-height: 680px;
+
+$big-width: 1280px;
+$big-height: 800px;
+
 .app-root {
     &__container {
-        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         color: white;
+        @media screen and (min-width: $medium-width) and(min-height: $medium-height) {
+            height: 100%;
+        }
     }
     &__header {
         display: flex;
         flex-direction: row;
         align-items: center;
         padding: 0 20px;
-        height: 80px;
+        height: 60px;
         background-color: #467e3f;
         color: white;
         font-size: 24px;
     }
     &__body {
-        height: 100%;
         background-color: rgba(146, 145, 67, 0.4);
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+        height: 100%;
     }
     &__footer {
         height: 60px;
@@ -32,27 +40,37 @@
         justify-content: center;
         align-items: center;
         font-size: 13px;
+        width: 100%;
+        padding: 0 10px;
         &-text {
             margin-right: 10px;
         }
     }
     &__main {
         height: 50%;
-        width: 75%;
+        width: 90%;
         display: flex;
         justify-content: space-around;
+        flex-wrap: wrap;
         padding: 5px;
+        @media screen and (min-width: $big-width) {
+            width: 75%;
+        }
     }
     &__instructions {
         height: 35%;
-        width: 75%;
+        width: 90%;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         padding: 16px;
         margin: 5px;
+        @media screen and (min-width: $big-width) {
+            width: 75%;
+        }
     }
     &__box {
-        width: 40%;
+        width: 100%;
         padding: 24px;
         margin: 16px;
         line-height: 24px;
@@ -73,31 +91,41 @@
         & a {
             color: white;
         }
+        @media screen and (min-width: $medium-width) and(min-height: $medium-height) {
+            width: 40%;
+        }
+        @media screen and (min-width: $medium-width) and(min-height: $medium-height) {
+            width: 40%;
+        }
     }
     &__step {
+        width: 100%;
         &-title {
             font-weight: bold;
             font-size: 20px;
         }
 
         &-body {
-            width: 50%;
             padding: 8px 16px;
             margin-top: 16px;
             margin-left: 16px;
+            margin-right: 16px;
         }
 
-        &-code{
+        &-code {
             background-color: rgba(146, 145, 67, 0.5);
         }
 
-        &-last{
+        &-last {
             position: relative;
+        }
+
+        @media screen and (min-width: $medium-width) and (min-height: $medium-height) {
+            width: 30%;
         }
 
         margin: 5px;
         padding: 16px;
-        width: 30%;
         background-color: #467e3f;
     }
 
@@ -117,7 +145,7 @@
         cursor: pointer;
     }
 
-    &__star{
+    &__star {
         padding-bottom: 16px;
     }
 
