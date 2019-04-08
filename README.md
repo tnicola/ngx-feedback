@@ -21,6 +21,11 @@ ngx-feedback relies upon an already existing javascript library [html2canvas](ht
 Look at the [demo](https://tnicola.github.io/ngx-feedback/). 
 
 ## Install
+You'll need to install html2canvas lib (required peer-dependency) in order to be able to take screeshots:
+
+    npm i html2canvas
+
+Then you can install ngx-feedback:
 
     npm i ngx-feedback
 
