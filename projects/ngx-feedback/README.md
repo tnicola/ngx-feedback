@@ -1,24 +1,81 @@
-# NgxFeedback
+# ngx-feedback 📸⭐💬
+Angular user feedback library
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.0.
+ngx-feedback is an Angular library for collecting Web app users feedbacks. The user will be able to leave a review for the entire page or select a a specific feature and rate it, leaving a comment.
 
-## Code scaffolding
+This library is meant to provide a fast, easy and clean way to collect user feedback through visible button and it provides a service that listens for incoming feedback and provides the data.
 
-Run `ng generate component component-name --project ngx-feedback` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-feedback`.
-> Note: Don't forget to add `--project ngx-feedback` or else it will be added to the default project in your `angular.json` file. 
+ngx-feedback relies upon an already existing javascript library [html2canvas](https://github.com/niklasvh/html2canvas) in order to take screenshots of the page.
 
-## Build
+### Features
+- A feedback button will be attached automatically to the edge of the page.
+- The possibility to choose for a generic or a specific feedback.
+- A screenshot of the selected area on the page.
 
-Run `ng build ngx-feedback` to build the project. The build artifacts will be stored in the `dist/` directory.
+<div align="center">
+	<img src ="https://github.com/tnicola/ngx-feedback/blob/master/docs/feedback.gif" />
+</div>
 
-## Publishing
+## Demo
 
-After building your library with `ng build ngx-feedback`, go to the dist folder `cd dist/ngx-feedback` and run `npm publish`.
+Look at the [demo](https://tnicola.github.io/ngx-feedback/). 
 
-## Running unit tests
+## Install
+You'll need to install html2canvas lib (required peer-dependency) in order to be able to take screeshots:
 
-Run `ng test ngx-feedback` to execute the unit tests via [Karma](https://karma-runner.github.io).
+    npm i html2canvas
 
-## Further help
+Then you can install ngx-feedback:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+    npm i ngx-feedback
+
+## Usage
+The usage is pretty simple, you just need to import `NgxFeedbackModule` and `NgxFeedbackService` and then start listening for feedbacks.
+
+`app.module.ts`
+```
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppComponent } from './app.component';
+import { NgxFeedbackModule } from 'ngx-feedback';
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    NgxFeedbackModule // Add this to your import
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+`app.component.ts`
+``` 
+
+import { Component, OnInit } from '@angular/core';
+import { NgxFeedbackService, FeedbackData } from 'ngx-feedback';
+
+@Component({
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss']
+})
+export class AppComponent implements OnInit {
+    constructor(private readonly feedbackService: NgxFeedbackService) {}
+    title = 'ngx-feedback-lib';
+
+    ngOnInit() {
+        this.feedbackService.listenForFeedbacks().subscribe((data: FeedbackData) => {
+            // Use the data coming from the feedback here
+        });
+    }
+}
+
+```
+
+## License
+MIT
