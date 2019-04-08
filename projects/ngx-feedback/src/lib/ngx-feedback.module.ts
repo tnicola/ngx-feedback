@@ -14,7 +14,14 @@ import { StarComponent } from './components/star/star.component';
 import { StarVoteComponent } from './components/star-vote/star-vote.component';
 
 @NgModule({
-    declarations: [FeedbackButtonComponent, ModalComponent, ButtonComponent, BackdropComponent, StarComponent, StarVoteComponent],
+    declarations: [
+        FeedbackButtonComponent,
+        ModalComponent,
+        ButtonComponent,
+        BackdropComponent,
+        StarComponent,
+        StarVoteComponent,
+    ],
     entryComponents: [FeedbackButtonComponent, ModalComponent, BackdropComponent],
     providers: [NgxFeedbackService, OrchestratorService, ComponentLoaderService, ModalService, SelectorsService, EventsService],
     imports: [CommonModule],

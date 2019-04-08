@@ -1,4 +1,4 @@
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { ComponentLoaderService } from './services/component-loader.service';
 import { FeedbackButtonComponent } from './components/feedback-button/feedback-button.component';
 import { OrchestratorService } from './services';
