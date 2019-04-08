@@ -1,3 +1,4 @@
+[![npm version](https://badge.fury.io/js/ngx-feedback.svg)](https://badge.fury.io/js/ngx-feedback)
 # ngx-feedback 📸⭐💬
 Angular user feedback library
 
