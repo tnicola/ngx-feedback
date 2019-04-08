@@ -7,7 +7,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class StarComponent implements OnInit {
     @Input()
-    type: 'full' | 'empty';
+    type: 'full' | 'empty' | 'temp';
 
     @Output()
     click: EventEmitter<any> = new EventEmitter();

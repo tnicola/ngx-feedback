@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject, Observable } from 'rxjs';
-import { FeedbackData } from '../models/feedback.model';
+import { FeedbackData } from '../models/feedback-data.model';
 
 @Injectable({ providedIn: 'root' })
 export class EventsService {

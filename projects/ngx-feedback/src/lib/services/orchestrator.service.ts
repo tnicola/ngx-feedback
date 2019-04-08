@@ -3,7 +3,7 @@ import { ModalService } from './modal.service';
 import { SelectorsService } from './selectors.service';
 import { EventsService } from './events.service';
 import { Subscription, Subject } from 'rxjs';
-import { FeedbackData } from '../models/feedback.model';
+import { FeedbackData } from '../models/feedback-data.model';
 
 @Injectable({ providedIn: 'root' })
 export class OrchestratorService implements OnInit, OnDestroy {

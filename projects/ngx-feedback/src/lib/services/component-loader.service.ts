@@ -5,10 +5,8 @@ import {
     ComponentFactoryResolver,
     ApplicationRef,
     Injector,
-    EmbeddedViewRef,
-    ComponentFactory
+    EmbeddedViewRef
 } from '@angular/core';
-import { OrchestratorService } from './orchestrator.service';
 
 @Injectable({ providedIn: 'root' })
 export class ComponentLoaderService<T> {

@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { OrchestratorService } from '../../services/orchestrator.service';
-import { EventsService } from 'ngx-feedback/lib/services/events.service';
+import { EventsService } from '../../services/events.service';
 
 @Component({
     selector: 'ngx-feedback-main-btn',

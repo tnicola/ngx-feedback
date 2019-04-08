@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { EventsService } from 'ngx-feedback/lib/services/events.service';
-import { FeedbackData } from 'ngx-feedback/lib/models/feedback.model';
+import { FeedbackData } from '../../models/feedback-data.model';
+import { EventsService } from '../../services/events.service';
 
 @Component({
     selector: 'ngx-feedback-modal',

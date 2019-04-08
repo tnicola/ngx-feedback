@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgxFeedbackService } from 'ngx-feedback';
+import { NgxFeedbackService, FeedbackData } from 'ngx-feedback';
 
 @Component({
     selector: 'app-root',
@@ -11,6 +11,6 @@ export class AppComponent implements OnInit {
     title = 'ngx-feedback-lib';
 
     ngOnInit() {
-        this.feedbackService.listenForFeedbacks().subscribe(data => {});
+        this.feedbackService.listenForFeedbacks().subscribe((data: FeedbackData) => {});
     }
 }
