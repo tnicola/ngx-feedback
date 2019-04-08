@@ -1,10 +1,20 @@
 {
   "name": "ngx-feedback",
   "version": "1.0.0",
+  "description": "Angular Feedback Library",
   "author": {
     "name": "Nicola Tommasi",
     "email": "nicola.tommasi.91@gmail.com"
   },
+  "license": "MIT",
+  "keywords": [
+      "angular",
+      "feedback",
+      "feedback-button",
+      "review",
+      "rating",
+      "monitoring"
+  ],
   "repository": {
     "url": "https://github.com/tnicola/ngx-feedback"
   },
