@@ -33,7 +33,7 @@ Then you can install ngx-feedback:
 The usage is pretty simple, you just need to import `NgxFeedbackModule` and `NgxFeedbackService` and then start listening for feedbacks.
 
 `app.module.ts`
-```
+```typescript
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -54,7 +54,7 @@ import { NgxFeedbackModule } from 'ngx-feedback';
 export class AppModule { }
 ```
 `app.component.ts`
-``` 
+```typescript
 
 import { Component, OnInit } from '@angular/core';
 import { NgxFeedbackService, FeedbackData } from 'ngx-feedback';
