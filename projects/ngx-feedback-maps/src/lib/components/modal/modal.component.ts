@@ -3,51 +3,55 @@ import { FeedbackData } from '../../models/feedback-data.model';
 import { EventsService } from '../../services/events.service';
 
 @Component({
-    selector: 'ngx-feedback-modal',
-    templateUrl: './modal.component.html',
-    styleUrls: ['./modal.component.scss']
+  selector: 'ngx-feedback-modal',
+  templateUrl: './modal.component.html',
+  styleUrls: ['./modal.component.scss'],
 })
 export class ModalComponent implements OnInit {
-    imgSrc = '';
-    enterSpecific: boolean;
-    enterGeneric: boolean;
-    voted: boolean;
-    thanks: boolean;
+  imgSrc = '';
+  enterSpecific: boolean;
+  enterGeneric: boolean;
+  voted: boolean;
+  thanks: boolean;
+  url: string;
 
-    @ViewChild('comment') comment: ElementRef;
+  noImageSrc = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
+  @ViewChild('comment') comment: ElementRef;
 
-    private formData: FeedbackData = { rate: 0, comment: '', screenshot: null } as FeedbackData;
-    constructor(private readonly eventsService: EventsService) {}
+  private formData: FeedbackData = { rate: 0, comment: '', screenshot: null } as FeedbackData;
+  constructor(private readonly eventsService: EventsService) {
+    this.url = window.location.href;
+  }
 
-    ngOnInit() {}
-    onSpecific() {
-        this.eventsService.onSpecificFeedbackClick();
-    }
+  ngOnInit() {}
+  onSpecific() {
+    this.eventsService.onSpecificFeedbackClick();
+  }
 
-    onGeneric() {
-        this.eventsService.onGenericFeedbackClik();
-    }
+  onGeneric() {
+    this.eventsService.onGenericFeedbackClik();
+  }
 
-    onCloseClicked() {
-        this.eventsService.onCloseClicked();
-    }
+  onCloseClicked() {
+    this.eventsService.onCloseClicked();
+  }
 
-    setPreview(preview: any) {
-        this.imgSrc = preview;
-        this.formData.screenshot = preview;
-    }
+  setPreview(preview: any) {
+    this.imgSrc = preview;
+    this.formData.screenshot = preview;
+  }
 
-    onVote(rate: number) {
-        this.voted = true;
-        this.formData.rate = rate;
-    }
+  onVote(rate: any) {
+    this.voted = true;
+    this.formData.rate = rate;
+  }
 
-    onSend() {
-        this.formData.comment = this.comment.nativeElement.value;
-        this.eventsService.onSendClicked(this.formData);
-        this.thanks = true;
-        setTimeout(() => {
-            this.eventsService.onCloseClicked();
-        }, 2000);
-    }
+  onSend() {
+    this.formData.comment = this.comment.nativeElement.value;
+    this.eventsService.onSendClicked(this.formData);
+    this.thanks = true;
+    setTimeout(() => {
+      this.eventsService.onCloseClicked();
+    }, 2000);
+  }
 }

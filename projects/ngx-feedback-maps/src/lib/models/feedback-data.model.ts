@@ -1,5 +1,5 @@
 export class FeedbackData {
-    rate: number;
-    comment: string;
-    screenshot: any;
+    rate: number = 0;
+    comment: string = '';
+    screenshot: any = undefined;
 }

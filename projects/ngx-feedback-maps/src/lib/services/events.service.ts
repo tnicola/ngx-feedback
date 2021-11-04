@@ -6,16 +6,16 @@ import { FeedbackData } from '../models/feedback-data.model';
 export class EventsService {
     constructor() {}
 
-    private feedbackClick: Subject<any> = new Subject<any>();
+    private feedbackClick: Subject<void> = new Subject<any>();
     feedbackClickObservable: Observable<any> = this.feedbackClick.asObservable();
 
-    private specificFeedbackClick: Subject<any> = new Subject<any>();
+    private specificFeedbackClick: Subject<void> = new Subject<any>();
     specificFeedbackClickObservable: Observable<any> = this.specificFeedbackClick.asObservable();
 
-    private genericFeedbackClick: Subject<any> = new Subject<any>();
+    private genericFeedbackClick: Subject<void> = new Subject<any>();
     genericFeedbackClickObservable: Observable<any> = this.genericFeedbackClick.asObservable();
 
-    private closeClick: Subject<any> = new Subject<any>();
+    private closeClick: Subject<void> = new Subject<any>();
     closeClickClickObservable: Observable<any> = this.closeClick.asObservable();
 
     private onSendClick: Subject<any> = new Subject<FeedbackData>();

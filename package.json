@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "build-package": "ng build ngx-feedback-maps",
+    "clean-package": "ng clean ngx-feedback-maps",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

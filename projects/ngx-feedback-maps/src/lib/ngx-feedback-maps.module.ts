@@ -3,7 +3,7 @@ import { FeedbackButtonComponent } from './components/feedback-button/feedback-b
 import { ModalComponent } from './components/modal/modal.component';
 import { ComponentLoaderService } from './services/component-loader.service';
 import { ModalService } from './services/modal.service';
-import { NgxFeedbackService } from './ngx-feedback.service';
+import { NgxFeedbackService } from './ngx-feedback-maps.service';
 import { CommonModule } from '@angular/common';
 import { SelectorsService } from './services/selectors.service';
 import { ButtonComponent } from './components/button/button.component';

@@ -7,66 +7,68 @@ import { FeedbackData } from '../models/feedback-data.model';
 
 @Injectable({ providedIn: 'root' })
 export class OrchestratorService implements OnInit, OnDestroy {
-    private subscriptions: Subscription[] = [];
+  private subscriptions: Subscription[] = [];
 
-    onSend: Subject<FeedbackData> = new Subject<FeedbackData>();
-    constructor(
-        private readonly modalService: ModalService,
-        private readonly selectorsService: SelectorsService,
-        private readonly eventsService: EventsService
-    ) {}
+  onSend: Subject<FeedbackData> = new Subject<FeedbackData>();
+  constructor(
+    private readonly modalService: ModalService,
+    private readonly selectorsService: SelectorsService,
+    private readonly eventsService: EventsService,
+  ) {}
 
-    ngOnInit() {
-        this.subscriptions.push(
-            this.onFeedbackButtonClick(),
-            this.onSpecificFeedbackClick(),
-            this.onGenericFeedbackClick(),
-            this.onElementSelected(),
-            this.onCloseClick(),
-            this.onSendClick()
-        );
-    }
+  ngOnInit() {
+    this.subscriptions.push(
+      this.onFeedbackButtonClick(),
+      this.onSpecificFeedbackClick(),
+      this.onGenericFeedbackClick(),
+      this.onElementSelected(),
+      this.onCloseClick(),
+      this.onSendClick(),
+    );
+  }
 
-    private onElementSelected() {
-        return this.selectorsService.preview.subscribe(prev => {
-            this.modalService.openWithPreview(prev);
-        });
-    }
+  private onElementSelected() {
+    return this.selectorsService.preview.subscribe((prev) => {
+      this.modalService.openWithPreview(prev);
+    });
+  }
 
-    private onFeedbackButtonClick() {
-        return this.eventsService.feedbackClickObservable.subscribe(() => {
-            this.modalService.draw();
-        });
-    }
+  private onFeedbackButtonClick() {
+    return this.eventsService.feedbackClickObservable.subscribe(() => {
+      this.modalService.draw();
+    });
+  }
 
-    private onSpecificFeedbackClick() {
-        return this.eventsService.specificFeedbackClickObservable.subscribe(() => {
-            this.modalService.remove();
-            this.selectorsService.elementsHighlight();
-        });
-    }
+  private onSpecificFeedbackClick() {
+    return this.eventsService.specificFeedbackClickObservable.subscribe(() => {
+      this.modalService.remove();
+      this.selectorsService.elementsHighlight();
+    });
+  }
 
-    private onGenericFeedbackClick() {
-        return this.eventsService.genericFeedbackClickObservable.subscribe(() => {
-            this.modalService.remove();
-            this.selectorsService.pageScreenshot();
-        });
-    }
+  private onGenericFeedbackClick() {
+    return this.eventsService.genericFeedbackClickObservable.subscribe(() => {
+      this.modalService.remove();
+      setTimeout(() => {
+        this.selectorsService.pageScreenshot();
+      }, 500);
+    });
+  }
 
-    private onCloseClick() {
-        return this.eventsService.closeClickClickObservable.subscribe(() => {
-            this.modalService.remove();
-        });
-    }
+  private onCloseClick() {
+    return this.eventsService.closeClickClickObservable.subscribe(() => {
+      this.modalService.remove();
+    });
+  }
 
-    private onSendClick() {
-        return this.eventsService.onSendClickObservable.subscribe((data: FeedbackData) => {
-            this.onSend.next(data);
-        });
-    }
-    ngOnDestroy() {
-        this.subscriptions.forEach(sub => {
-            sub.unsubscribe();
-        });
-    }
+  private onSendClick() {
+    return this.eventsService.onSendClickObservable.subscribe((data: FeedbackData) => {
+      this.onSend.next(data);
+    });
+  }
+  ngOnDestroy() {
+    this.subscriptions.forEach((sub) => {
+      sub.unsubscribe();
+    });
+  }
 }

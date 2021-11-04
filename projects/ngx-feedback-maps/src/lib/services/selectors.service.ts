@@ -19,17 +19,17 @@ export class SelectorsService {
         this.screenshot(document.body);
     }
     elementsHighlight() {
-        let element: Element;
-        const elements = [];
-        this.source = fromEvent(document, 'mousemove').subscribe((ev: MouseEvent) => {
+        let element: Element | null;
+        const elements: (Element | null)[] = [];
+        this.source = fromEvent(document, 'mousemove').subscribe((ev) => {
             if (element) {
                 this.renderer.removeClass(element, 'ngx-feedback__highlight');
             }
-            element = document.elementFromPoint(ev.x, ev.y);
+            element = document.elementFromPoint((ev as MouseEvent).x, (ev as MouseEvent).y);
             if (elements.findIndex(el => el === element) === -1) {
                 elements.push(element);
                 this.subs.push(
-                    fromEvent(element, 'click').subscribe((evt: MouseEvent) => {
+                    fromEvent((element as any), 'click').subscribe((evt: any) => {
                         evt.stopPropagation();
                         this.screenshot(element);
                     })
