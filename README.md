@@ -1,82 +1,27 @@
-[![npm version](https://badge.fury.io/js/ngx-feedback.svg)](https://badge.fury.io/js/ngx-feedback)
-# ngx-feedback 📸⭐💬
-Angular user feedback library
+# NgxFeedbackMaps
 
-ngx-feedback is an Angular library for collecting Web app users feedbacks. The user will be able to leave a review for the entire page or select a a specific feature and rate it, leaving a comment.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.4.
 
-This library is meant to provide a fast, easy and clean way to collect user feedback through visible button and it provides a service that listens for incoming feedback and provides the data.
+## Development server
 
-ngx-feedback relies upon an already existing javascript library [html2canvas](https://github.com/niklasvh/html2canvas) in order to take screenshots of the page.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-### Features
-- A feedback button will be attached automatically to the edge of the page.
-- The possibility to choose for a generic or a specific feedback.
-- A screenshot of the selected area on the page.
+## Code scaffolding
 
-<div align="center">
-	<img src ="https://github.com/tnicola/ngx-feedback/blob/master/docs/feedback.gif" />
-</div>
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Demo
+## Build
 
-Look at the [demo](https://tnicola.github.io/ngx-feedback/). 
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Install
-You'll need to install html2canvas lib (required peer-dependency) in order to be able to take screeshots:
+## Running unit tests
 
-    npm i html2canvas
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-Then you can install ngx-feedback:
+## Running end-to-end tests
 
-    npm i ngx-feedback
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Usage
-The usage is pretty simple, you just need to import `NgxFeedbackModule` and `NgxFeedbackService` and then start listening for feedbacks.
+## Further help
 
-`app.module.ts`
-```typescript
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppComponent } from './app.component';
-import { NgxFeedbackModule } from 'ngx-feedback';
-
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    NgxFeedbackModule // Add this to your import
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
-```
-`app.component.ts`
-```typescript
-
-import { Component, OnInit } from '@angular/core';
-import { NgxFeedbackService, FeedbackData } from 'ngx-feedback';
-
-@Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
-})
-export class AppComponent implements OnInit {
-    constructor(private readonly feedbackService: NgxFeedbackService) {}
-    title = 'ngx-feedback-lib';
-
-    ngOnInit() {
-        this.feedbackService.listenForFeedbacks().subscribe((data: FeedbackData) => {
-            // Use the data coming from the feedback here
-        });
-    }
-}
-
-```
-
-## License
-MIT
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
