@@ -1,0 +1,7 @@
+/*
+ * Public API Surface of ngx-feedback-maps
+ */
+export * from './lib/ngx-feedback-maps.service';
+export * from './lib/ngx-feedback-maps.module';
+export * from './lib/models/feedback-data.model';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3Byb2plY3RzL25neC1mZWVkYmFjay1tYXBzL3NyYy9wdWJsaWMtYXBpLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOztHQUVHO0FBRUgsY0FBYyxpQ0FBaUMsQ0FBQztBQUNoRCxjQUFjLGdDQUFnQyxDQUFDO0FBQy9DLGNBQWMsa0NBQWtDLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKlxuICogUHVibGljIEFQSSBTdXJmYWNlIG9mIG5neC1mZWVkYmFjay1tYXBzXG4gKi9cblxuZXhwb3J0ICogZnJvbSAnLi9saWIvbmd4LWZlZWRiYWNrLW1hcHMuc2VydmljZSc7XG5leHBvcnQgKiBmcm9tICcuL2xpYi9uZ3gtZmVlZGJhY2stbWFwcy5tb2R1bGUnO1xuZXhwb3J0ICogZnJvbSAnLi9saWIvbW9kZWxzL2ZlZWRiYWNrLWRhdGEubW9kZWwnO1xuIl19

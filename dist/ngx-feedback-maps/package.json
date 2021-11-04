@@ -1,0 +1,19 @@
+{
+  "name": "ngx-feedback-maps",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^12.0.5",
+    "@angular/core": "^12.0.5"
+  },
+  "dependencies": {
+    "tslib": "^2.1.0"
+  },
+  "main": "bundles/ngx-feedback-maps.umd.js",
+  "module": "fesm2015/ngx-feedback-maps.js",
+  "es2015": "fesm2015/ngx-feedback-maps.js",
+  "esm2015": "esm2015/ngx-feedback-maps.js",
+  "fesm2015": "fesm2015/ngx-feedback-maps.js",
+  "typings": "ngx-feedback-maps.d.ts",
+  "metadata": "ngx-feedback-maps.metadata.json",
+  "sideEffects": false
+}
