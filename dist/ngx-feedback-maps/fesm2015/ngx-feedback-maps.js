@@ -79,7 +79,7 @@ class FeedbackButtonComponent {
 FeedbackButtonComponent.decorators = [
     { type: Component, args: [{
                 selector: 'ngx-feedback-main-btn',
-                template: "<button (click)=\"onClick()\" class=\"feedback-button__container\">Submit Feedback</button>",
+                template: "<button (click)=\"onClick()\" class=\"feedback-button__container\" role=\"complementary\">Submit Feedback</button>",
                 encapsulation: ViewEncapsulation.None,
                 styles: [".feedback-button__container{position:fixed;right:-65px;top:calc(50% - 37.5px);cursor:pointer;transform:rotate(-90deg);border:none;border-radius:5px 5px 0 0;background-color:#3b5560;color:#fff;font-size:14px;padding:5px 10px;font-weight:700;font-family:Verdana;outline:none}.ngx-feedback__highlight{outline:4px solid #ffc058;pointer-events:none;cursor:default!important}"]
             },] }
