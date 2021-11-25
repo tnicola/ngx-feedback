@@ -14,3 +14,5 @@ export { EventsService as ɵd } from './lib/services/events.service';
 export { ModalService as ɵk } from './lib/services/modal.service';
 export { OrchestratorService as ɵj } from './lib/services/orchestrator.service';
 export { SelectorsService as ɵl } from './lib/services/selectors.service';
+
+//# sourceMappingURL=ngx-feedback-maps.d.ts.map
