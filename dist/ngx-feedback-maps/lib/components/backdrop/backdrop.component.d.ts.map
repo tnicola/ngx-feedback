@@ -1,1 +1,0 @@
-{"version":3,"file":"backdrop.component.d.ts","sources":["backdrop.component.d.ts"],"names":[],"mappings":"AAAA;;AACA;AACA;AACA;AACA;AACA;;;AACA","sourcesContent":["import { OnInit, EventEmitter } from '@angular/core';\nexport declare class BackdropComponent implements OnInit {\n    click: EventEmitter<any>;\n    constructor();\n    ngOnInit(): void;\n    onClick(): void;\n}\n"]}

@@ -1,1 +1,0 @@
-{"version":3,"file":"ngx-feedback-maps.module.d.ts","sources":["ngx-feedback-maps.module.d.ts"],"names":[],"mappings":";;;;;;;;AAAA;;;;AACA","sourcesContent":["export declare class NgxFeedbackModule {\n}\n"]}
