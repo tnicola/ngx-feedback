@@ -1,5 +1,6 @@
 import { Observable } from 'rxjs';
 import { FeedbackData } from '../models/feedback-data.model';
+import * as i0 from "@angular/core";
 export declare class EventsService {
     constructor();
     private feedbackClick;
@@ -17,4 +18,6 @@ export declare class EventsService {
     onFeedbackButtonClick(): void;
     onCloseClicked(): void;
     onSendClicked(data: FeedbackData): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<EventsService, never>;
+    static ɵprov: i0.ɵɵInjectableDeclaration<EventsService>;
 }

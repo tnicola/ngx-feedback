@@ -1,17 +1,6 @@
 {
-  "extends": "../../tslint.json",
   "rules": {
-    "directive-selector": [
-      true,
-      "attribute",
-      "ngxFeedback",
-      "camelCase"
-    ],
-    "component-selector": [
-      true,
-      "element",
-      "ngx-feedback",
-      "kebab-case"
-    ]
+    "directive-selector": [true, "attribute", "ngxFeedback", "camelCase"],
+    "component-selector": [true, "element", "ngx-feedback", "kebab-case"]
   }
 }

@@ -14,6 +14,5 @@
   "esm2015": "esm2015/ngx-feedback-maps.js",
   "fesm2015": "fesm2015/ngx-feedback-maps.js",
   "typings": "ngx-feedback-maps.d.ts",
-  "metadata": "ngx-feedback-maps.metadata.json",
   "sideEffects": false
 }

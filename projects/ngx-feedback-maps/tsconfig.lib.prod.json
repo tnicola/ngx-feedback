@@ -4,6 +4,7 @@
   "compilerOptions": {
     "declarationMap": false,
     "strictPropertyInitialization": false,
+    "experimentalDecorators": true
   },
   "angularCompilerOptions": {
     "compilationMode": "partial"

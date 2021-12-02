@@ -1,5 +1,6 @@
 import { OnInit, ElementRef } from '@angular/core';
 import { EventsService } from '../../services/events.service';
+import * as i0 from "@angular/core";
 export declare class ModalComponent implements OnInit {
     private readonly eventsService;
     imgSrc: string;
@@ -19,4 +20,6 @@ export declare class ModalComponent implements OnInit {
     setPreview(preview: any): void;
     onVote(rate: any): void;
     onSend(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ModalComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ModalComponent, "ngx-feedback-modal", never, {}, {}, never, never>;
 }

@@ -1,21 +1,25 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
-  "extends": "../../tsconfig.json",
-  "compilerOptions": {
-    "outDir": "../../out-tsc/lib",
-    "target": "es2015",
-    "declaration": true,
-    "declarationMap": true,
-    "inlineSources": true,
-    "strictPropertyInitialization": false,
-    "types": [],
-    "lib": [
-      "dom",
-      "es2018"
-    ]
+  "angularCompilerOptions": {
+    "compilationMode": "partial",
+    "strictTemplates": true,
+    "enableResourceInlining": true
   },
-  "exclude": [
-    "src/test.ts",
-    "**/*.spec.ts"
-  ]
+  "buildOnSave": false,
+  "compileOnSave": false,
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "es2020",
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "declaration": true,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "skipLibCheck": true,
+    "emitDecoratorMetadata": false,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "lib": ["dom", "es2018"],
+    "allowSyntheticDefaultImports": true
+  },
+  "exclude": ["node_modules", "dist", "**/*.shim.ts", "**/*.spec.ts"]
 }
